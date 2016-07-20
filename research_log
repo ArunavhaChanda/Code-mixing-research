@@ -1,0 +1,30 @@
+Test run 0:
+(Chronologically 3rd)
+July 12, 2016
+Algorithm v0.1
+Straight dictionary identification (English, then Bengali). No correction.
+FIRE 2013 accuracy: 63.636%
+
+Test run 1:
+June 24, 2016
+Algorithm v1.0
+Basic dictionary identification used, predictor-corrector method for English and Bengali (check English, then Bengali)
+FIRE 2013 accuracy: 66.048%
+
+Test run 2:
+July 12, 2016
+Algorithm v1.1
+Same as previous including Bengali suffixes (check English, then Bengali)
+FIRE 2013 accuracy: 69.573%
+
+Test run 4:
+July 13, 2016
+Algorithm v0.2
+Straight dictionary identification (Bengali, then English). No correction.
+FIRE 2013 accuracy: 76.067%
+
+Test run 5:
+July 13, 2016
+Algorithm v1.15
+Same as previous including Bengali suffixes (check Bengali, then English)
+FIRE 2013 accuracy: 76.067%
