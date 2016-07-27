@@ -28,3 +28,47 @@ July 13, 2016
 Algorithm v1.15
 Same as previous including Bengali suffixes (check Bengali, then English)
 FIRE 2013 accuracy: 76.067%
+
+Test run 6:
+July 19, 2016
+Algorithm v1.20
+Same as 1.15 changing phone-checks to include only ones with "a" at the end.
+Result file: 105fire_2_1.txt
+FIRE 2013 accuracy: 78.107%
+
+Test run 7:
+July 20, 2016
+Algorithm v1.30
+Same as 1.20 removing key-checks.
+Result file: 105fire_2_1.txt
+FIRE 2013 accuracy: 76.809%
+
+Test run 8:
+July 22, 2016
+Algorithm v0.2
+Straight dictionary identification (Bengali, then English). No correction.
+FIRE 2013 accuracy: 59.184%
+
+Test run 9:
+July 22, 2016
+Algorithm v0.3
+Straight dictionary identification (Bengali, then English) with Bengali suffixes. No correction.
+FIRE 2013 accuracy: 62.338%
+
+
+
+ARUNAVHA CHANDA FACEBOOK MESSAGES CORPUS
+
+Test Run 1:
+July 27, 2016
+Algorithm v1.0
+Regular dictionary search (Bengali then English), followed by corrector method
+Predictor accuracy: 60.811%
+Corrector accuracy: 60.811%
+
+Test Run 2:
+July 27, 2016
+Algorithm v1.1
+Regular dictionary search (English then Bengali), followed by corrector method
+Predictor accuracy: 76.834%
+Corrector accuracy: 80.116%
