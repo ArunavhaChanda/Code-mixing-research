@@ -3,20 +3,21 @@ from unidecode import unidecode
 import editdistance
 
 def beng_word(word):
+	word=word.lower()
 	bengdict = open("./beng_words.txt",'r')
 	line = bengdict.readline()
 	line = line.split(",")
 	for dict_word in line:
 		dict_word=dict_word.strip()
-			'''
-			if(editdistance.eval(phone[i].lower(),word.lower())<=1 or editdistance.eval(key[i].lower(),word.lower())<=1):
-				print("1"+key[i]+" "+phone[i])
-				bengdict.close()
-				return 1
-				'''
-			if(editdistance.eval(dict_word.lower(),word.lower())<=1):
-				bengdict.close()
-				return 1
+		'''
+		if(editdistance.eval(phone[i].lower(),word.lower())<=1 or editdistance.eval(key[i].lower(),word.lower())<=1):
+			print("1"+key[i]+" "+phone[i])
+			bengdict.close()
+			return 1
+		'''
+		if(editdistance.eval(dict_word.lower(),word.lower())<=1):
+			bengdict.close()
+			return 1
 
 	bengdict.close()
 	beng_suff = open("./beng_suffix.csv",'r')

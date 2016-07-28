@@ -65,6 +65,28 @@ print("Words in Bengali corpus: "+str(len(line)))
 comp.close()
 
 
+norm1 = open("eng_normalize_dict.txt",'r')
+norm2 = open("norm_2.txt",'r')
+wrong_words = open("bad_eng.csv",'w')
+
+line=norm1.readline()
+while(line):
+	line=line.split()
+	line=line[0].strip(" ")
+	wrong_words.write(line+", ")
+	line = norm1.readline()
+norm1.close()
+
+line=norm2.readline()
+while(line):
+	line=line.split('|')
+	line=line[0].split()
+	line=line[1].strip(" ")
+	wrong_words.write(line+", ")
+	line = norm2.readline()
+norm2.close()
+wrong_words.close()
+
 '''
 dic=open("./beng_dict.txt",'r')
 word_list=open("./beng_words.txt",'w')
@@ -104,7 +126,7 @@ dic.close()
 word_list.close()
 '''
 
-
+'''
 text=" ".join(brown.words())
 
 text=text.split()
@@ -116,7 +138,7 @@ for i in range(1,11):
 		print (i)
 #for line in fileinput.FileInput("./eng_stop.txt",inplace=1):
  #      print (line)
-
+'''
 
 
 '''
