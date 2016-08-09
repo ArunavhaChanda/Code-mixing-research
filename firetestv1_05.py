@@ -1,4 +1,5 @@
-import finder_beng as finder
+#import finder_beng as finder
+import finder
 from collections import defaultdict
 import beng_search as beng
 

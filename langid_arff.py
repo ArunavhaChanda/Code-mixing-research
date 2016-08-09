@@ -20,7 +20,8 @@ def main():
 	beng_statistics = {}
 	beng_statistics = ng.ngram_prof("./beng_train.txt",beng_statistics)
 	eng_statistics = {}
-	
+
+	'''	
 	text = " ".join(brown.words())
 	tokenizer = RegexpTokenizer("[a-zA-Z'`]+")
 	text = tokenizer.tokenize(text)
@@ -28,6 +29,8 @@ def main():
 	brown_words=open("./brown_words.txt",'w')
 	brown_words.write(text)
 	brown_words.close()
+	'''
+
 	eng_statistics = ng.ngram_prof("./brown_words.txt",eng_statistics)
 
 	lang_stats={}
@@ -35,7 +38,8 @@ def main():
 	lang_stats.update({'b':beng_statistics})
 
 
-	fin=open("./beng_corpus.txt",'r')
+	#fin=open("./beng_corpus.txt",'r')
+	fin=open("./BanglaEnglish_FIRE2013_AnnotatedDev.txt",'r')
 	#fout_pred=open("./predicted_tags_arff.txt",'w')
 	#fout_corr=open("./corrected_tags_arff.txt",'w')
 	word_list=[]
@@ -47,10 +51,17 @@ def main():
 	data=[]
 	sent=fin.readline()
 	while(sent):
-		sent = re.sub(r'[^\w\s]','',sent)
+		############ Only for Facebook corpus (COMMENT for FIRE)
+		#sent = re.sub(r'[^\w\s]','',sent)
+		##########################################
 		words=[]
 		sent=sent.split()
 		for elem in sent:
+			############ Only for FIRE CORPUS (COMMENT for Facebook)
+			elem=elem.split('\\')
+			corr_tag.append(elem[1][0])
+			elem=elem[0]
+			#################################
 			elem.strip()
 			words.append(elem)
 		type_map = defaultdict(str)
@@ -131,20 +142,28 @@ def main():
 						type_count[type_map[words[j]]]+=1
 			if(word_count):
 				surround.append(str(type_count["Bengali word"]/word_count))
+				#if((type_count["Bengali word"]/word_count)>=0.5):
+				#	surround.append('1')
+				#else:
+				#	surround.append('0')
 			else:
 				surround.append('0')
 		sent=fin.readline()
 
-	real_tag = open("./real_tags.txt",'r')
-	line = real_tag.readline().split()
-	for word in line:
-		tags=word.split('\\')
-		corr_tag.append(tags[1])
-	real_tag.close()
+	
+	############ Only for Facebook corpus (COMMENT for FIRE)
+	#real_tag = open("./real_tags.txt",'r')
+	#line = real_tag.readline().split()
+	#for word in line:
+	#	tags=word.split('\\')
+	#	corr_tag.append(tags[1])
+	#real_tag.close()
+	######################################
+	
 
 	for i in range(len(word_list)):
 		vector=[]
-		vector.append(word_list[i])
+#		vector.append(word_list[i])
 		vector.append(int(eng_dic[i]))
 		vector.append(int(beng_dic[i]))
 		vector.append(ngram[i])
@@ -156,7 +175,6 @@ def main():
 	'description': u'',
 	'relation': 'langid',
 	'attributes': [
-	('word','STRING'),
 	('eng_dict','NUMERIC'),
 	('beng_dict','NUMERIC'),
 	('ngram','STRING'),
@@ -169,7 +187,12 @@ def main():
 
 	final = arff.dumps(obj)
 
-	final_file=open("./lang_id.arff",'w')
+	#FIRE
+	final_file=open("./lang_id_fire.arff",'w')
+	#
+	#Facebook
+	#final_file=open("./lang_id.arff",'w')
+	#
 	final_file.write(final)
 	final_file.close()
 

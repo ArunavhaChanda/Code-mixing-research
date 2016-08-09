@@ -72,3 +72,288 @@ Algorithm v1.1
 Regular dictionary search (English then Bengali), followed by corrector method
 Predictor accuracy: 76.834%
 Corrector accuracy: 80.116%
+
+
+
+
+WEKA
+
+(FACEBOOK CORPUS, J48, USE TRAINING SET)
+
+Correctly Classified Instances         472               91.1197 %
+Incorrectly Classified Instances        46                8.8803 %
+Kappa statistic                          0.8225
+Mean absolute error                      0.1562
+Root mean squared error                  0.2794
+Relative absolute error                 31.2345 %
+Root relative squared error             55.8878 %
+Total Number of Instances              518     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.885    0.062    0.935      0.885    0.909      0.824    0.926     0.903     B
+                 0.938    0.115    0.889      0.938    0.913      0.824    0.926     0.889     E
+Weighted Avg.    0.911    0.088    0.912      0.911    0.911      0.824    0.926     0.896     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 231  30 |   a = B
+  16 241 |   b = E
+
+
+
+
+(FACEBOOK CORPUS, J48, 10-FOLD CROSS-VALIDATION)
+
+Correctly Classified Instances         467               90.1544 %
+Incorrectly Classified Instances        51                9.8456 %
+Kappa statistic                          0.8031
+Mean absolute error                      0.1582
+Root mean squared error                  0.2926
+Relative absolute error                 31.632  %
+Root relative squared error             58.5199 %
+Total Number of Instances              518     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.889    0.086    0.913      0.889    0.901      0.803    0.899     0.868     B
+                 0.914    0.111    0.890      0.914    0.902      0.803    0.899     0.874     E
+Weighted Avg.    0.902    0.098    0.902      0.902    0.902      0.803    0.899     0.871     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 232  29 |   a = B
+  22 235 |   b = E
+
+
+
+
+(FIRE CORPUS, J48, 10-FOLD CROSS-VALIDATION)
+
+Correctly Classified Instances         483               89.6104 %
+Incorrectly Classified Instances        56               10.3896 %
+Kappa statistic                          0.7566
+Mean absolute error                      0.1502
+Root mean squared error                  0.2802
+Relative absolute error                 34.2411 %
+Root relative squared error             59.831  %
+Total Number of Instances              539     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.948    0.211    0.903      0.948    0.925      0.759    0.928     0.944     B
+                 0.789    0.052    0.879      0.789    0.831      0.759    0.928     0.893     E
+Weighted Avg.    0.896    0.160    0.895      0.896    0.895      0.759    0.928     0.927     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 345  19 |   a = B
+  37 138 |   b = E
+
+
+
+
+
+(FIRE CORPUS, J48, USE TRAINING SET)
+
+Correctly Classified Instances         492               91.2801 %
+Incorrectly Classified Instances        47                8.7199 %
+Kappa statistic                          0.7929
+Mean absolute error                      0.1381
+Root mean squared error                  0.2628
+Relative absolute error                 31.4834 %
+Root relative squared error             56.1246 %
+Total Number of Instances              539     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.973    0.211    0.905      0.973    0.938      0.799    0.945     0.958     B
+                 0.789    0.027    0.932      0.789    0.854      0.799    0.945     0.907     E
+Weighted Avg.    0.913    0.152    0.914      0.913    0.911      0.799    0.945     0.942     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 354  10 |   a = B
+  37 138 |   b = E
+
+
+
+
+
+(FIRE CORPUS, RANDOM FOREST, USE TRAINING SET)
+
+Correctly Classified Instances         495               91.8367 %
+Incorrectly Classified Instances        44                8.1633 %
+Kappa statistic                          0.8058
+Mean absolute error                      0.1245
+Root mean squared error                  0.2485
+Relative absolute error                 28.3855 %
+Root relative squared error             53.0724 %
+Total Number of Instances              539     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.978    0.206    0.908      0.978    0.942      0.812    0.967     0.981     B
+                 0.794    0.022    0.946      0.794    0.863      0.812    0.967     0.941     E
+Weighted Avg.    0.918    0.146    0.920      0.918    0.916      0.812    0.967     0.968     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 356   8 |   a = B
+  36 139 |   b = E
+
+
+
+(FIRE CORPUS, RANDOM FOREST, 10-FOLD CROSS VALIDATION)
+
+Correctly Classified Instances         490               90.9091 %
+Incorrectly Classified Instances        49                9.0909 %
+Kappa statistic                          0.7854
+Mean absolute error                      0.1418
+Root mean squared error                  0.2832
+Relative absolute error                 32.3119 %
+Root relative squared error             60.4693 %
+Total Number of Instances              539     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.206    0.907      0.964    0.935      0.789    0.922     0.943     B
+                 0.794    0.036    0.914      0.794    0.850      0.789    0.922     0.890     E
+Weighted Avg.    0.909    0.151    0.909      0.909    0.907      0.789    0.922     0.926     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 351  13 |   a = B
+  36 139 |   b = E
+
+
+
+
+
+(FIRE CORPUS, IBk, 10-FOLD CROSS VALIDATION)
+
+Correctly Classified Instances         494               91.6512 %
+Incorrectly Classified Instances        45                8.3488 %
+Kappa statistic                          0.8017
+Mean absolute error                      0.1397
+Root mean squared error                  0.2848
+Relative absolute error                 31.8354 %
+Root relative squared error             60.8211 %
+Total Number of Instances              539     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.975    0.206    0.908      0.975    0.940      0.807    0.925     0.955     B
+                 0.794    0.025    0.939      0.794    0.861      0.807    0.925     0.882     E
+Weighted Avg.    0.917    0.147    0.918      0.917    0.915      0.807    0.925     0.932     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 355   9 |   a = B
+  36 139 |   b = E
+
+
+
+
+
+(FACEBOOK CORPUS, J48, 10-FOLD CROSS-VALIDATION)
+(NO SURROUNDING RATE DATA)
+
+Correctly Classified Instances         462               89.1892 %
+Incorrectly Classified Instances        56               10.8108 %
+Kappa statistic                          0.784 
+Mean absolute error                      0.1896
+Root mean squared error                  0.3085
+Relative absolute error                 37.9132 %
+Root relative squared error             61.6985 %
+Total Number of Instances              518     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.839    0.054    0.940      0.839    0.887      0.789    0.864     0.848     B
+                 0.946    0.161    0.853      0.946    0.897      0.789    0.864     0.801     E
+Weighted Avg.    0.892    0.107    0.897      0.892    0.892      0.789    0.864     0.825     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 219  42 |   a = B
+  14 243 |   b = E
+
+
+
+
+
+
+
+(FACEBOOK CORPUS, J48, 10-FOLD CROSS-VALIDATION)
+(BINARY SURROUNDING RATE DATA)
+
+Correctly Classified Instances         458               88.417  %
+Incorrectly Classified Instances        60               11.583  %
+Kappa statistic                          0.7685
+Mean absolute error                      0.1837
+Root mean squared error                  0.3106
+Relative absolute error                 36.7459 %
+Root relative squared error             62.1246 %
+Total Number of Instances              518     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.851    0.082    0.914      0.851    0.881      0.770    0.886     0.858     B
+                 0.918    0.149    0.858      0.918    0.887      0.770    0.886     0.853     E
+Weighted Avg.    0.884    0.115    0.886      0.884    0.884      0.770    0.886     0.856     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 222  39 |   a = B
+  21 236 |   b = E
+
+
+
+
+
+
+
+(FACEBOOK CORPUS, J48, 10-FOLD CROSS-VALIDATION)
+(ONLY N-GRAM)
+
+Correctly Classified Instances         417               80.5019 %
+Incorrectly Classified Instances       101               19.4981 %
+Kappa statistic                          0.6104
+Mean absolute error                      0.3102
+Root mean squared error                  0.3943
+Relative absolute error                 62.0475 %
+Root relative squared error             78.8601 %
+Total Number of Instances              518     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.736    0.125    0.857      0.736    0.792      0.617    0.778     0.755     B
+                 0.875    0.264    0.765      0.875    0.817      0.617    0.778     0.711     E
+Weighted Avg.    0.805    0.194    0.812      0.805    0.804      0.617    0.778     0.733     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 192  69 |   a = B
+  32 225 |   b = E
+

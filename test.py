@@ -58,6 +58,8 @@ comp.close()
 
 
 '''
+
+'''
 comp=open("./beng_train.txt",'r')
 line=comp.readline()
 line=line.split()
@@ -86,6 +88,7 @@ while(line):
 	line = norm2.readline()
 norm2.close()
 wrong_words.close()
+'''
 
 '''
 dic=open("./beng_dict.txt",'r')
@@ -156,8 +159,8 @@ fin.close()
 fout.close()
 '''
 
-'''
-fin=open("./beng_corpus.txt",'r')
+
+fin=open("./BanglaEnglish_FIRE2013_AnnotatedDev.txt",'r')
 count=0
 line=fin.readline()
 while(line):
@@ -167,7 +170,7 @@ while(line):
 	line=fin.readline()
 fin.close()
 print("Total words: "+str(count))
-'''
+
 
 
 '''
