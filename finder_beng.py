@@ -1,5 +1,5 @@
 import eng_search as eng
-import beng_search as beng
+import beng_search_old as beng
 
 def find(word):
 	if (beng.beng_word(word)):

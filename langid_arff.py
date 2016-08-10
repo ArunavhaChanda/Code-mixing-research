@@ -79,8 +79,10 @@ def main():
 			if(eng.eng_search(word)):
 				eng_rat=1
 
-			eng_dic.append(eng_rat)
-			beng_dic.append(beng_rat)
+			############ REVERT 1/6
+			#eng_dic.append(eng_rat)
+			#beng_dic.append(beng_rat)
+			##############
 
 			word_statistics={}
 			lang_ratio = {}
@@ -100,10 +102,19 @@ def main():
 			ngram.append(ng_lang_result)
 
 			if(beng_rat and not eng_rat):
+				############# REVERT 2/6
+				beng_dic.append('2')
+				###################
 				type_word="Bengali word"
 			elif(eng_rat and not beng_rat):
+				############# REVERT 3/6
+				beng_dic.append('0')
+				###################
 				type_word="English word"
 			else:
+				############# REVERT 4/6
+				beng_dic.append('1')
+				###################
 				if(ng_lang_result=='B'):
 					type_word="Bengali word"
 				else:
@@ -164,7 +175,9 @@ def main():
 	for i in range(len(word_list)):
 		vector=[]
 #		vector.append(word_list[i])
-		vector.append(int(eng_dic[i]))
+		########REVERT 5/6
+		#vector.append(int(eng_dic[i]))
+		##############
 		vector.append(int(beng_dic[i]))
 		vector.append(ngram[i])
 		vector.append(float(surround[i]))
@@ -175,7 +188,9 @@ def main():
 	'description': u'',
 	'relation': 'langid',
 	'attributes': [
-	('eng_dict','NUMERIC'),
+	#############REVERT 6/6
+	#('eng_dict','NUMERIC'),
+	####################
 	('beng_dict','NUMERIC'),
 	('ngram','STRING'),
 	('beng_surr','REAL'),
